@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Button from '@/components/Button';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -44,19 +46,19 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: FaEnvelope,
       title: 'Email',
       content: 'info@vynzomedia.com',
       link: 'mailto:info@vynzomedia.com',
     },
     {
-      icon: '📱',
+      icon: FaPhone,
       title: 'Phone',
       content: '+1 (555) 123-4567',
       link: 'tel:+15551234567',
     },
     {
-      icon: '📍',
+      icon: FaMapMarkerAlt,
       title: 'Address',
       content: '123 Creative Street, Digital City, DC 12345',
       link: '#',
@@ -71,12 +73,14 @@ export default function Contact() {
         <section className="relative py-24 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.1),transparent_50%)]"></div>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
               Have a project in mind? Let's discuss how we can help bring your
               vision to life.
             </p>
@@ -84,8 +88,9 @@ export default function Contact() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-24 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(234,179,8,0.05),transparent)]"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Contact Info */}
               <div className="lg:col-span-1 space-y-6">
@@ -93,29 +98,37 @@ export default function Contact() {
                   <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
                     Contact Information
                   </h2>
-                  <p className="text-gray-400 mb-8">
+                  <p className="text-gray-400 mb-8 leading-relaxed">
                     We're here to help! Reach out to us through any of these
                     channels.
                   </p>
                 </div>
 
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.link}
-                    className="block p-6 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-yellow-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/10"
-                  >
-                    <div className="flex items-start space-x-4">
-                      <div className="text-3xl">{info.icon}</div>
-                      <div>
-                        <h3 className="text-white font-semibold mb-1">
-                          {info.title}
-                        </h3>
-                        <p className="text-gray-400">{info.content}</p>
+                {contactInfo.map((info, index) => {
+                  const IconComponent = info.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={info.link}
+                      className="block p-6 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-yellow-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-yellow-500/10 hover:-translate-y-1 group"
+                    >
+                      <div className="flex items-start space-x-4">
+                        <div className="relative flex-shrink-0">
+                          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/30 to-yellow-600/30 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                          <div className="relative w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 border border-yellow-500/30">
+                            <IconComponent className="text-yellow-500 text-xl" />
+                          </div>
+                        </div>
+                        <div>
+                          <h3 className="text-white font-semibold mb-1 group-hover:text-yellow-400 transition-colors duration-300">
+                            {info.title}
+                          </h3>
+                          <p className="text-gray-400">{info.content}</p>
+                        </div>
                       </div>
-                    </div>
-                  </a>
-                ))}
+                    </a>
+                  );
+                })}
               </div>
 
               {/* Contact Form */}
@@ -239,13 +252,14 @@ export default function Contact() {
                       ></textarea>
                     </div>
 
-                    <button
+                    <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full px-8 py-4 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold rounded-full hover:shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                      variant="primary"
+                      className="w-full text-lg"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
-                    </button>
+                    </Button>
                   </form>
                 </div>
               </div>
