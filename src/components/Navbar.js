@@ -18,27 +18,31 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-yellow-500/10'
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
+          ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-[#fad02c]/10'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="relative w-12 h-12 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-lg p-2 border border-yellow-500/30 group-hover:border-yellow-500/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-yellow-500/30">
-              <Image
-                src="/images/logo.png"
-                alt="Vynzo Media Logo"
-                fill
-                className="object-contain group-hover:scale-110 transition-transform duration-300 brightness-110"
-              />
+          <Link href="/" className="flex items-center group">
+            <div className="relative w-32 h-12 sm:w-40 sm:h-14 rounded-lg p-2.5 transition-all duration-300 group-hover:scale-105">
+              {/* Glow background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-yellow-500/15 to-yellow-600/20 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+              {/* Border glow */}
+              <div className="absolute inset-0 rounded-lg border-2 border-yellow-400/40 shadow-[0_0_20px_rgba(250,208,44,0.3)] group-hover:border-yellow-400/60 group-hover:shadow-[0_0_30px_rgba(250,208,44,0.5)] transition-all duration-300"></div>
+              {/* Logo with light background */}
+              <div className="relative w-full h-full bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center">
+                <Image
+                  src="/images/new-logo.png"
+                  alt="Vynzo Media Logo"
+                  fill
+                  className="object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  priority
+                />
+              </div>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Vynzo Media
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,6 +52,12 @@ export default function Navbar() {
               className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
             >
               Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+            >
+              About
             </Link>
             <Link
               href="/services"
@@ -62,17 +72,17 @@ export default function Navbar() {
               Portfolio
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
             >
-              About
+              Contact
             </Link>
             <Link
               href="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold rounded-full hover:shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+              className="px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 ease-out hover:scale-[1.02] relative overflow-hidden group text-sm"
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10">Book Consultation</span>
             </Link>
           </div>
 
@@ -111,6 +121,13 @@ export default function Navbar() {
               Home
             </Link>
             <Link
+              href="/about"
+              className="block text-white hover:text-yellow-400 transition-colors duration-300 font-medium py-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
               href="/services"
               className="block text-white hover:text-yellow-400 transition-colors duration-300 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -125,19 +142,19 @@ export default function Navbar() {
               Portfolio
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="block text-white hover:text-yellow-400 transition-colors duration-300 font-medium py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              Contact
             </Link>
             <Link
               href="/contact"
-              className="block px-6 py-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold rounded-full text-center hover:shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 relative overflow-hidden group"
+              className="block px-5 py-2.5 bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-semibold rounded-lg text-center hover:shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 ease-out hover:scale-[1.02] relative overflow-hidden group text-sm"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
-              <span className="relative z-10">Contact Us</span>
+              <span className="relative z-10">Book Consultation</span>
             </Link>
           </div>
         )}
@@ -145,3 +162,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

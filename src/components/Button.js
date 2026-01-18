@@ -10,15 +10,15 @@ export default function Button({
   ...props
 }) {
   const baseClasses =
-    'inline-flex items-center justify-center px-8 py-4 font-bold rounded-full transition-all duration-300 text-lg relative overflow-hidden group';
+    'inline-flex items-center justify-center gap-2 px-6 py-2.5 font-semibold rounded-lg transition-all duration-300 ease-out text-sm sm:text-base relative overflow-hidden group h-[50px] sm:h-auto max-h-[60px]';
 
   const variants = {
     primary:
-      'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black hover:shadow-2xl hover:shadow-yellow-500/50 hover:scale-105',
+      'bg-gradient-to-r from-yellow-400 to-yellow-600 text-black hover:shadow-2xl hover:shadow-yellow-500/50 hover:scale-[1.02]',
     secondary:
-      'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:scale-105',
+      'border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black hover:scale-[1.02]',
     outline:
-      'border-2 border-gray-700 text-white hover:border-yellow-500 hover:text-yellow-500 hover:scale-105',
+      'border-2 border-gray-700 text-white hover:border-yellow-500 hover:text-yellow-500 hover:scale-[1.02]',
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${className}`;
@@ -32,7 +32,7 @@ export default function Button({
     return (
       <Link href={href} className={classes} {...props}>
         {shineEffect}
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 flex items-center gap-2">{children}</span>
       </Link>
     );
   }
@@ -40,7 +40,7 @@ export default function Button({
   return (
     <button type={type} onClick={onClick} className={classes} {...props}>
       {shineEffect}
-      <span className="relative z-10">{children}</span>
+      <span className="relative z-10 flex items-center gap-2">{children}</span>
     </button>
   );
 }

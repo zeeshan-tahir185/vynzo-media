@@ -16,10 +16,20 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* Ensure content doesn't go under fixed navbar */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 html {
@@ -89,10 +99,10 @@ html {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(234, 179, 8, 0.3);
+    box-shadow: 0 0 20px rgba(250, 208, 44, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(234, 179, 8, 0.6);
+    box-shadow: 0 0 40px rgba(250, 208, 44, 0.6);
   }
 }
 
@@ -143,6 +153,16 @@ html {
   animation-delay: 0.5s;
 }
 
+/* Rotating Border Animation */
+@keyframes spin {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
 /* Hover Effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -150,7 +170,7 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(234, 179, 8, 0.2);
+  box-shadow: 0 20px 40px rgba(250, 208, 44, 0.2);
 }
 
 /* Gradient Text Animation */
@@ -171,6 +191,35 @@ html {
   animation: gradient-shift 3s ease infinite;
 }
 
+/* Smooth Theme Improvements */
+:root {
+  --yellow-400: #fad02c;
+  --yellow-500: #fad02c;
+  --yellow-600: #e0b825;
+  --theme-yellow: #fad02c;
+}
+
+/* Better color contrast */
+body {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Improved gradients */
+.bg-gradient-yellow {
+  background: linear-gradient(135deg, var(--yellow-400), var(--yellow-600));
+}
+
+/* Card improvements */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(250, 208, 44, 0.25);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -181,17 +230,17 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #eab308, #ca8a04);
+  background: linear-gradient(to bottom, #fad02c, #e0b825);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #facc15, #eab308);
+  background: linear-gradient(to bottom, #fad02c, #d4a91f);
 }
 
 /* Selection Color */
 ::selection {
-  background-color: rgba(234, 179, 8, 0.3);
+  background-color: rgba(250, 208, 44, 0.3);
   color: #ffffff;
 }
 

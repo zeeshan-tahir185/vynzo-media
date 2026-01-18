@@ -5,45 +5,66 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAl
 export default function Footer() {
   return (
     <footer className="bg-black border-t border-yellow-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center space-x-3 mb-4 group">
-              <div className="relative w-10 h-10 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-lg p-2 border border-yellow-500/30 group-hover:border-yellow-500/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-yellow-500/30">
-                <Image
-                  src="/images/logo.png"
-                  alt="Vynzo Media Logo"
-                  fill
-                  className="object-contain brightness-110"
-                />
+            <Link href="/" className="inline-block mb-6 group">
+              <div className="relative w-32 h-12 sm:w-40 sm:h-14 rounded-lg p-2.5 transition-all duration-300 group-hover:scale-105">
+                {/* Glow background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-yellow-500/15 to-yellow-600/20 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
+                {/* Border glow */}
+                <div className="absolute inset-0 rounded-lg border-2 border-yellow-400/40 shadow-[0_0_20px_rgba(250,208,44,0.3)] group-hover:border-yellow-400/60 group-hover:shadow-[0_0_30px_rgba(250,208,44,0.5)] transition-all duration-300"></div>
+                {/* Logo with light background */}
+                <div className="relative w-full h-full bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center">
+                  <Image
+                    src="/images/new-logo.png"
+                    alt="Vynzo Media Logo"
+                    fill
+                    className="object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  />
+                </div>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                Vynzo Media
-              </span>
             </Link>
-            <p className="text-gray-400 mb-4 max-w-md leading-relaxed">
+            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
               Transforming ideas into stunning visual experiences. We create
               exceptional digital content that captivates and converts.
             </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <a href="mailto:Info@vynzomedia.com" className="flex items-center space-x-3 text-gray-400 hover:text-yellow-400 transition-colors duration-300 group">
+                <FaEnvelope className="text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
+                <span>Info@vynzomedia.com</span>
+              </a>
+              <a href="tel:+923126080431" className="flex items-center space-x-3 text-gray-400 hover:text-yellow-400 transition-colors duration-300 group">
+                <FaPhone className="text-yellow-500 group-hover:scale-110 transition-transform duration-300" />
+                <span>+92 312 6080431</span>
+              </a>
+              <div className="flex items-start space-x-3 text-gray-400">
+                <FaMapMarkerAlt className="text-yellow-500 mt-1 flex-shrink-0" />
+                <span>Fatehpur District Layyah ZIP 31050</span>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
+                className="w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 aria-label="Facebook"
               >
                 <FaFacebook className="w-5 h-5 text-white" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
+                className="w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 aria-label="Instagram"
               >
                 <FaInstagram className="w-5 h-5 text-white" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
+                className="w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="w-5 h-5 text-white" />
@@ -53,8 +74,8 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-semibold mb-6 text-lg">Quick Links</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
                   href="/"
@@ -100,8 +121,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
+            <ul className="space-y-3">
               <li>
                 <span className="text-gray-400">Video Editing</span>
               </li>
@@ -121,7 +142,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400">
             © {new Date().getFullYear()} Vynzo Media. All rights reserved.
           </p>

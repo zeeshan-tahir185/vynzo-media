@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
@@ -117,11 +118,14 @@ export default function Portfolio() {
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
               Our Portfolio
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-              Showcasing our best work and creative excellence
+            <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto font-medium">
+              Showcasing Creative Excellence
+            </p>
+            <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              Explore our collection of stunning projects that have transformed brands and driven results.
             </p>
           </div>
         </section>
@@ -151,33 +155,35 @@ export default function Portfolio() {
         <section className="py-16 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(234,179,8,0.03),transparent)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProjects.map((project, index) => {
                 const IconComponent = project.icon;
                 return (
-                  <div
+                  <motion.div
                     key={project.id}
-                    className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden hover:border-yellow-500/50 transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/10 hover:-translate-y-2"
-                    style={{
-                      animationDelay: `${index * 100}ms`,
-                    }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    whileHover={{ y: -5, scale: 1.01 }}
+                    className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl overflow-hidden h-full flex flex-col transition-all duration-300 ease-out hover:border-yellow-500/50 hover:shadow-xl hover:shadow-yellow-500/10"
                   >
                     {/* Project Image Placeholder */}
-                    <div className="relative h-64 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative h-56 bg-gradient-to-br from-gray-800 to-black flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-yellow-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out"></div>
                       <div className="relative z-10">
-                        <div className="w-20 h-20 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-xl flex items-center justify-center border border-yellow-500/30 group-hover:scale-110 transition-transform duration-500">
-                          <IconComponent className="text-yellow-500 text-3xl" />
+                        <div className="w-14 h-14 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-xl flex items-center justify-center border border-yellow-500/30 group-hover:scale-110 transition-transform duration-300 ease-out">
+                          <IconComponent className="text-yellow-500 text-xl" />
                         </div>
                       </div>
                     </div>
 
                     {/* Project Info */}
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
+                    <div className="p-5 flex flex-col flex-grow">
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                      <p className="text-gray-400 text-sm mb-4 leading-relaxed flex-grow">
                         {project.description}
                       </p>
                       <div className="flex items-center text-yellow-500 text-sm font-medium group-hover:gap-2 transition-all duration-300">
@@ -185,7 +191,7 @@ export default function Portfolio() {
                         <FaExternalLinkAlt className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
@@ -196,13 +202,13 @@ export default function Portfolio() {
         <section className="py-24 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.2),transparent_70%)]"></div>
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Let's create something amazing together.
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 font-medium">
+              Let's create something amazing together
             </p>
-            <Button href="/contact" variant="primary" className="text-lg px-10 py-5">
+            <Button href="/contact" variant="primary" className="px-6 sm:px-8">
               Get Started Today
             </Button>
           </div>
