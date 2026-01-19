@@ -32,8 +32,8 @@ export default function Navbar() {
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-yellow-500/15 to-yellow-600/20 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
               {/* Border glow */}
               <div className="absolute inset-0 rounded-lg border-2 border-yellow-400/40 shadow-[0_0_20px_rgba(250,208,44,0.3)] group-hover:border-yellow-400/60 group-hover:shadow-[0_0_30px_rgba(250,208,44,0.5)] transition-all duration-300"></div>
-              {/* Logo with light background */}
-              <div className="relative w-full h-full bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center">
+              {/* Logo with white background */}
+              <div className="relative w-full h-full bg-white/50 backdrop-blur-sm rounded-md flex items-center justify-center">
                 <Image
                   src="/images/new-logo.png"
                   alt="Vynzo Media Logo"

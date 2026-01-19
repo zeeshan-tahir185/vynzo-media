@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 import {
   FaVideo,
   FaMagic,
@@ -201,7 +203,7 @@ export default function Services() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-32 bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
+        <section className="py-7 md:py-[50px] bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(234,179,8,0.03),transparent)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -263,7 +265,7 @@ export default function Services() {
         </section>
 
         {/* Process Section */}
-        <section className="py-32 bg-black relative overflow-hidden">
+        <section className="py-7 md:py-[50px] bg-black relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(234,179,8,0.02),transparent)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -315,8 +317,14 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <Testimonials />
+
+        {/* FAQ Section */}
+        <FAQ />
+
         {/* CTA Section */}
-        <section className="py-32 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/10 relative overflow-hidden">
+        <section className="py-7 md:py-[100px] bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.15),transparent_70%)]"></div>
           <motion.div
             className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"

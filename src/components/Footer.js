@@ -15,8 +15,8 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-yellow-500/15 to-yellow-600/20 rounded-lg blur-sm group-hover:blur-md transition-all duration-300"></div>
                 {/* Border glow */}
                 <div className="absolute inset-0 rounded-lg border-2 border-yellow-400/40 shadow-[0_0_20px_rgba(250,208,44,0.3)] group-hover:border-yellow-400/60 group-hover:shadow-[0_0_30px_rgba(250,208,44,0.5)] transition-all duration-300"></div>
-                {/* Logo with light background */}
-                <div className="relative w-full h-full bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center">
+                {/* Logo with white background */}
+                <div className="relative w-full h-full bg-white/50 backdrop-blur-sm rounded-md flex items-center justify-center">
                   <Image
                     src="/images/new-logo.png"
                     alt="Vynzo Media Logo"
@@ -49,14 +49,18 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/1BrKCbd66f/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 aria-label="Facebook"
               >
                 <FaFacebook className="w-5 h-5 text-white" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/vynzomedia"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-gray-800 hover:bg-yellow-500 flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/50"
                 aria-label="Instagram"
               >
@@ -124,28 +128,69 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-6 text-lg">Services</h3>
             <ul className="space-y-3">
               <li>
-                <span className="text-gray-400">Video Editing</span>
+                <Link
+                  href="/services#video-editing"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+                >
+                  Video Editing
+                </Link>
               </li>
               <li>
-                <span className="text-gray-400">Animation</span>
+                <Link
+                  href="/services#video-animation"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+                >
+                  Animation
+                </Link>
               </li>
               <li>
-                <span className="text-gray-400">Logo Design</span>
+                <Link
+                  href="/services#logo-design"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+                >
+                  Logo Design
+                </Link>
               </li>
               <li>
-                <span className="text-gray-400">Web Development</span>
+                <Link
+                  href="/services#web-development"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+                >
+                  Web Development
+                </Link>
               </li>
               <li>
-                <span className="text-gray-400">UI/UX Design</span>
+                <Link
+                  href="/services#uiux-design"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300"
+                >
+                  UI/UX Design
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-          <p className="text-gray-400">
-            © {new Date().getFullYear()} Vynzo Media. All rights reserved.
-          </p>
+        <div className="mt-12 pt-8 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400">
+              © {new Date().getFullYear()} Vynzo Media. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+              >
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

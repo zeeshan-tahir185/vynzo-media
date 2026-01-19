@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
+import Testimonials from '@/components/Testimonials';
 import {
   FaVideo,
   FaMagic,
@@ -197,6 +198,9 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <Testimonials />
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/10 relative overflow-hidden">

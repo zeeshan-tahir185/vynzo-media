@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Button from '@/components/Button';
+import FAQ from '@/components/FAQ';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
@@ -119,7 +120,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-32 bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
+        <section className="py-7 md:py-[50px] bg-gradient-to-b from-black to-gray-950 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(234,179,8,0.03),transparent)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
