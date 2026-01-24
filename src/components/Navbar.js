@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${isScrolled
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${isScrolled || isMobileMenuOpen
           ? 'bg-black/95 backdrop-blur-md shadow-lg shadow-[#fad02c]/10'
           : 'bg-transparent'
         }`}
@@ -112,7 +112,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 pt-4 space-y-4 animate-fadeIn">
+          <div className="md:hidden pb-6 pt-4 space-y-4 animate-fadeIn relative z-[9999] -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
             <Link
               href="/"
               className="block text-white hover:text-yellow-400 transition-colors duration-300 font-medium py-2"

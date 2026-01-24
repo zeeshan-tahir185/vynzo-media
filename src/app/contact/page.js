@@ -70,7 +70,7 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-20">
+      <main className="min-h-screen md:pt-20">
         {/* Hero Section - 100vh */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black">
@@ -107,7 +107,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl mb-6 leading-tight">
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Get In</span>
               <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Touch</span>
             </h1>

@@ -127,7 +127,7 @@ export default function Testimonials() {
     <section className="py-24 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl mb-4">
+          <h2 className="text-3xl md:text-5xl mb-4">
             <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">What Our Clients</span>
             <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Say</span>
           </h2>

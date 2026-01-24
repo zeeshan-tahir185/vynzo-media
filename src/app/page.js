@@ -188,7 +188,7 @@ export default function Home() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight tracking-tight"
+              className="text-3xl md:text-6xl lg:text-7xl mb-6 leading-tight tracking-tight"
             >
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Where</span>
               <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Creativity Meets</span>
@@ -258,7 +258,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl mb-6">
                 <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
                 <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Services</span>
               </h2>
@@ -333,7 +333,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl mb-6">
                 <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Why Choose</span>
                 <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Vynzo Media?</span>
               </h2>
@@ -398,7 +398,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl mb-6">
               <span className="font-bold text-white">Ready to Elevate</span>
               <span className="font-light text-gray-300"> Your Brand?</span>
             </h2>

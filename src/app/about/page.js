@@ -75,7 +75,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-20">
+      <main className="min-h-screen md:pt-20">
         {/* Hero Section - 100vh */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black">
@@ -112,7 +112,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl mb-6 leading-tight">
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">About</span>
               <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Vynzo Media</span>
             </h1>
@@ -136,7 +136,7 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-4xl md:text-6xl mb-8">
+                <h2 className="text-3xl md:text-6xl mb-8">
                   <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
                   <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Story</span>
                 </h2>
@@ -187,7 +187,7 @@ export default function About() {
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         className="text-center p-6 bg-black/50 rounded-xl border border-gray-800 hover:border-yellow-500/50 transition-all duration-300"
                       >
-                        <div className="text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-2">
+                        <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-2">
                           {stat.number}
                         </div>
                         <div className="text-gray-400">{stat.label}</div>
@@ -211,7 +211,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl mb-4">
                 <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
                 <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Values</span>
               </h2>
@@ -271,7 +271,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl mb-4">
                 <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Why Work</span>
                 <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> With Us</span>
               </h2>
@@ -333,7 +333,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl mb-6">
               <span className="font-bold text-white">Let's Create Something</span>
               <span className="font-light text-gray-300"> Amazing Together</span>
             </h2>

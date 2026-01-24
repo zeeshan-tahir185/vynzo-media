@@ -153,11 +153,11 @@ export default function Services() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-20">
+      <main className="min-h-screen md:pt-20 relative z-0">
         {/* Hero Section - 100vh */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-950 to-black z-0">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.1),transparent_50%)] z-0"></div>
             <motion.div
               className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"
               animate={{
@@ -185,12 +185,12 @@ export default function Services() {
             />
           </div>
           <motion.div
-            className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+            className="relative z-[1] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl mb-6 leading-tight">
               <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
               <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Services</span>
             </h1>
@@ -276,7 +276,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl mb-4">
                 <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
                 <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Process</span>
               </h2>
@@ -303,7 +303,7 @@ export default function Services() {
                     <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-gray-900 to-black"></div>
 
                     <div className="relative z-10 flex flex-col h-full">
-                      <div className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300 ease-out">
+                      <div className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300 ease-out">
                         {item.step}
                       </div>
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-yellow-400 transition-colors duration-300">
@@ -335,7 +335,7 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl mb-6">
               <span className="font-bold text-white">Ready to Get</span>
               <span className="font-light text-gray-300"> Started?</span>
             </h2>

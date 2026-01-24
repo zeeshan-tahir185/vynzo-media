@@ -15,7 +15,7 @@ export default function Terms() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(250,208,44,0.1),transparent_50%)]"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
               Terms of Service
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
