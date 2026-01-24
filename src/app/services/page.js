@@ -190,8 +190,9 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
-              Our Services
+            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+              <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
+              <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Services</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto font-medium">
               Complete Digital Solutions for Your Success
@@ -275,8 +276,9 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                Our Process
+              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+                <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
+                <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Process</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-400">
                 How we bring your vision to life
@@ -333,8 +335,9 @@ export default function Services() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Ready to Get Started?
+            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              <span className="font-bold text-white">Ready to Get</span>
+              <span className="font-light text-gray-300"> Started?</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 font-medium">
               Let's discuss how we can help bring your project to life

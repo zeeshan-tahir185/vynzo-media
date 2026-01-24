@@ -65,8 +65,9 @@ export default function FAQ() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-            Frequently Asked Questions
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+            <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Frequently Asked</span>
+            <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Questions</span>
           </h2>
           <p className="text-xl text-gray-400">
             Everything you need to know about our services

@@ -119,8 +119,9 @@ export default function Portfolio() {
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
-              Our Portfolio
+            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+              <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
+              <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Portfolio</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto font-medium">
               Showcasing Creative Excellence
@@ -206,8 +207,9 @@ export default function Portfolio() {
         <section className="py-24 bg-gradient-to-r from-yellow-500/10 via-yellow-600/10 to-yellow-500/10 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(234,179,8,0.2),transparent_70%)]"></div>
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Ready to Start Your Project?
+            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              <span className="font-bold text-white">Ready to Start</span>
+              <span className="font-light text-gray-300"> Your Project?</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 font-medium">
               Let's create something amazing together

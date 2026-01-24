@@ -107,8 +107,9 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
-              Get In Touch
+            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+              <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Get In</span>
+              <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Touch</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto font-medium">
               Ready to Start Your Project?
@@ -127,8 +128,9 @@ export default function Contact() {
               {/* Contact Info */}
               <div className="lg:col-span-1 space-y-6">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                    Contact Information
+                  <h2 className="text-3xl mb-6">
+                    <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Contact</span>
+                    <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Information</span>
                   </h2>
                   <p className="text-gray-400 mb-8 leading-relaxed">
                     We're here to help! Reach out to us through any of these
@@ -190,8 +192,9 @@ export default function Contact() {
                   <div className="absolute inset-[2px] rounded-2xl bg-gray-900/50"></div>
 
                   <div className="relative z-10">
-                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                      Send Us a Message
+                    <h2 className="text-3xl mb-8">
+                      <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Send Us a</span>
+                      <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Message</span>
                     </h2>
 
                     {submitStatus === 'success' && (

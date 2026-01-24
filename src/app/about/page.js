@@ -112,8 +112,9 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text text-transparent leading-tight">
-              About Vynzo Media
+            <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+              <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">About</span>
+              <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Vynzo Media</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-4xl mx-auto font-medium">
               Crafting Digital Excellence Since Day One
@@ -135,8 +136,9 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                  Our Story
+                <h2 className="text-4xl md:text-6xl mb-8">
+                  <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
+                  <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Story</span>
                 </h2>
                 <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                   <p>
@@ -209,8 +211,9 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                Our Values
+              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+                <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Our</span>
+                <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> Values</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-400">
                 The principles that guide everything we do
@@ -268,8 +271,9 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-                Why Work With Us
+              <h2 className="text-4xl md:text-5xl lg:text-6xl mb-4">
+                <span className="font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">Why Work</span>
+                <span className="font-light bg-gradient-to-r from-yellow-500/80 to-yellow-600/80 bg-clip-text text-transparent"> With Us</span>
               </h2>
             </motion.div>
 
@@ -329,8 +333,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              Let's Create Something Amazing Together
+            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6">
+              <span className="font-bold text-white">Let's Create Something</span>
+              <span className="font-light text-gray-300"> Amazing Together</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 font-medium">
               Ready to take your brand to the next level? Get in touch with us today

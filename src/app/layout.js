@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Space_Grotesk, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Space_Grotesk, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -27,6 +27,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
 export const metadata = {
   title: "Vynzo Media - Professional Digital Agency | Video Editing, Animation, Web Development",
   description: "Vynzo Media offers professional video editing, animation, logo design, UI/UX design, web development, SEO marketing, and digital marketing services. Transform your ideas into stunning visual experiences.",
@@ -43,7 +50,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} ${montserrat.variable} antialiased`}
       >
         {children}
         <WhatsAppButton />
